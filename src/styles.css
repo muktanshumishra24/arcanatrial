@@ -5,6 +5,11 @@
   margin: 0;
 }
 
+body {
+  font-family: sans-serif;
+  padding: 2.5rem;
+}
+
 h1 {
   text-align: center;
   margin: 10px 0;
@@ -13,6 +18,29 @@ h1 {
 h1,
 h2 {
   font-family: "Montserrat", sans-serif;
+}
+
+.result_style {
+  padding: 3rem;
+}
+
+.title_style {
+  padding: 2rem;
+  background-color: #eaeaea;
+}
+
+.admonition {
+  border: 1px solid purple;
+  border-radius: 5px;
+  padding: 3rem;
+}
+
+.function_container {
+  display: flex;
+}
+
+.functions {
+  padding: 0.5rem;
 }
 
 .btn {

@@ -1,92 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Parcel Sandbox</title>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Auth example</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <script type="module" src="src/index.js"></script>
   </head>
 
   <body>
-    <h1>Auth Example</h1>
-    <div class="x-container">
-      <main>
-        <div class="grid">
-          <div class="operations">
-            <button class="btn" onclick="connect()">Connect</button>
-            <button class="btn" onclick="socialLogin()">
-              Login with google
-            </button>
-            <button class="btn" onclick="linkLogin()">Login with link</button>
-            <button class="btn" onclick="getAccounts()">Get Accounts</button>
-            <button class="btn" onclick="requestAccounts()">
-              Request Accounts
-            </button>
-            <button class="btn" onclick="getSelfPublicKey()">
-              Get Public Key
-            </button>
-            <button class="btn" onclick="addChain()">Add Chain</button>
-            <button class="btn" onclick="switchChain()">Switch Chain</button>
-            <button class="btn" onclick="addToken()">Add Token</button>
-            <!-- <button class="btn" onclick="getPublicKey()">Get other's Public Key</button> -->
-            <button class="btn" onclick="sign()">Request signature</button>
-            <!-- <button class="btn" onclick="encrypt()">Do encryption</button> -->
-            <!-- <button class="btn" onclick="ethDecrypt()">Request decryption</button> -->
-            <button class="btn" onclick="personalSign()">
-              Personal signature
-            </button>
-            <button class="btn" onclick="signTyped()">Sign Typed</button>
-            <button class="btn" onclick="sendTransaction()">
-              Send Transaction
-            </button>
-            <button class="btn" onclick="signTransaction()">
-              Sign Transaction
-            </button>
-            <button class="btn" onclick="deploy()">
-              Deploy Contract
-            </button>
-            <button class="btn" onclick="interact()">
-              Interact
-            </button>
-            <button class="btn" onclick="logout()">Logout</button>
-          </div>
-          <div class="view-window">
-            <h2 class="section-heading">STATUS</h2>
-            <div class="pill">
-              <span class="sub-heading">Current account: </span>
-              <span class="sub-value" id="account">-</span>
-              <br />
-            </div>
-            <div class="pill">
-              <span class="sub-heading">REQ: </span>
-              <span class="sub-value" id="request">-</span>
-              <br />
-            </div>
-            <div class="pill">
-              <span class="sub-heading">RESULT: </span>
-              <span class="sub-value" id="result">-</span>
-              <br />
-            </div>
-            <hr />
-            <!-- <div class="pill" v-if="error">
-            <div class="error">
-              <span>-</span>
-            </div> -->
-            <!-- <br /> -->
-            <!-- </div> -->
-            <!-- <div class="pill">
-            <input type="text" placeholder="User Input" v-model="input" />
-          </div> -->
-          </div>
+    <div id="app"></div>
+    <h1>Hello Vanilla!</h1>
+    <div>
+      <div class="title_style">
+        <p style="padding: 1rem;">
+          This simple HTML/CSS/JS Web3 app example demonstrates Arcana Auth SDK
+          integration and uses
+          <a
+            href="https://parceljs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Parcel.</a
+          >
+        </p>
+        <div class="admonition">
+          <strong>Use model:</strong>
+          <br /><br />Users must log into the app by clicking on the Auth Plug
+          and Play 'Connect' button below, authenticate themselves and then
+          access the wallet.
         </div>
-      </main>
+      </div>
     </div>
-    <script
-      src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
-      type="application/javascript"
-    ></script>
-    <script src="./auth.umd.js"></script>
-    <script src="./index.js"></script>
+
+    <div class="function_container">
+      <div class="functions">
+        <button id="Btn-Init-Auth">Connect</button>
+      </div>
+      <div class="functions">
+        <button id="Btn-GetAccount">Get Accounts</button>
+      </div>
+      <div class="functions">
+        <button id="Btn-AddChain">Add Chain</button>
+      </div>
+      <div class="functions">
+        <button id="Btn-SwitchChain">Switch Chain</button>
+      </div>
+      <div class="functions">
+        <button id="Btn-Logout">Logout</button>
+      </div>
+      <div class="functions">
+        <button id="Btn-SendT">Send Tokens</button>
+      </div>
+    </div>
+    <div class="result_style" id="result-container">
+      <strong>Result: </strong><span id="result"></span>
+    </div>
   </body>
 </html>

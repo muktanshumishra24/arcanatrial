@@ -1,24 +1,23 @@
 {
-  "name": "arcana-auth-test-examples",
+  "name": "simple-html-app-auth-integration",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "serve",
-    "build": "echo This is a static template, there is no bundler or bundling involved!"
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/codesandbox-app/static-template.git"
+  "dependencies": {
+    "@arcana/auth": "1.0.2",
+    "parcel": "2.8.3",
+    "web3": "^1.8.2"
   },
-  "keywords": [],
-  "author": "Ives van Hoorne",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/codesandbox-app/static-template/issues"
-  },
-  "homepage": "https://github.com/codesandbox-app/static-template#readme",
   "devDependencies": {
-    "serve": "^11.2.0"
-  }
+    "@babel/core": "7.2.0",
+    "typescript": "4.4.4"
+  },
+  "resolutions": {
+    "@babel/preset-env": "7.13.8"
+  },
+  "keywords": []
 }
